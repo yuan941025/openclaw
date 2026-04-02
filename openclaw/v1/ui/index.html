@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lobster V1 UI</title>
+    <style>
+      body {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        margin: 0;
+        padding: 24px;
+        background: #0f172a;
+        color: #e2e8f0;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      section {
+        border: 1px solid #334155;
+        border-radius: 12px;
+        padding: 16px;
+        margin-bottom: 16px;
+        background: #111827;
+      }
+      h1, h2 {
+        margin-top: 0;
+      }
+      label {
+        display: block;
+        margin-bottom: 12px;
+      }
+      input, textarea, button {
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 6px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #475569;
+        background: #0b1120;
+        color: #e2e8f0;
+      }
+      textarea {
+        min-height: 160px;
+        resize: vertical;
+      }
+      button {
+        cursor: pointer;
+        background: #1d4ed8;
+      }
+      pre {
+        white-space: pre-wrap;
+        word-break: break-word;
+        background: #020617;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #1e293b;
+        min-height: 80px;
+      }
+      .status {
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Lobster V1.UI</h1>
+
+      <section>
+        <h2>Provider Status</h2>
+        <div class="status" id="provider-status">Loading...</div>
+      </section>
+
+      <section>
+        <h2>Search</h2>
+        <label>
+          Search Query
+          <input id="query" placeholder="find local service business opportunities" />
+        </label>
+        <label>
+          Market Scope
+          <input id="market-scope" placeholder="Taiwan local SMB services" />
+        </label>
+        <button id="run-proposal">Run Proposal</button>
+      </section>
+
+      <section>
+        <h2>Proposal</h2>
+        <pre id="proposal-output">No proposal yet.</pre>
+      </section>
+
+      <section>
+        <h2>Authorization JSON</h2>
+        <label>
+          Authorized Plan
+          <textarea id="authorization-input" placeholder='{"project_name":"","agents":[{"role":"","responsibility":""}],"tasks":[{"description":"","assigned_agent":""}],"goal":""}'></textarea>
+        </label>
+        <button id="execute-flow">Execute</button>
+      </section>
+
+      <section>
+        <h2>Execution Report</h2>
+        <pre id="execution-output">No execution report yet.</pre>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

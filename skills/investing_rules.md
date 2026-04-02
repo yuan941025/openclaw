@@ -1,0 +1,30 @@
+# Investing Rules
+
+## Purpose
+
+## Scope
+
+## Non-Negotiables
+
+## Analysis Order
+
+## Time Horizon Split
+
+### Short-Term
+
+### Mid-Term
+
+### Long-Term
+
+## Risk-First Checklist
+
+## Position Sizing Rules
+
+## Evidence Standard
+
+## Uncertainty Handling
+
+## Output Contract
+
+## Prohibited Behaviors
+
