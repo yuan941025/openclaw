@@ -7,7 +7,6 @@ import { AudienceSection } from "./AudienceSection";
 import { CTASection } from "./CTASection";
 import { EarlyAccessSection } from "./EarlyAccessSection";
 import { ExampleSwitcher } from "./ExampleSwitcher";
-import { FounderPreview } from "./FounderPreview";
 import { InputPanel } from "./InputPanel";
 import { OutputPanel } from "./OutputPanel";
 import { PricingSection } from "./PricingSection";
@@ -31,11 +30,8 @@ export function SummaryAgentPage() {
     isGenerating,
     generateReport,
     loadExample,
-    stats,
     feedbackChoice,
     submitFeedback,
-    isFounderPreviewOpen,
-    setIsFounderPreviewOpen,
   } = useSummaryAgent();
 
   return (
@@ -192,12 +188,6 @@ export function SummaryAgentPage() {
         />
 
         <SiteFooter />
-
-        <FounderPreview
-          isOpen={isFounderPreviewOpen}
-          onToggle={() => setIsFounderPreviewOpen((current) => !current)}
-          stats={stats}
-        />
       </div>
     </main>
   );
